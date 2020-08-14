@@ -18,7 +18,7 @@ jobs:
     - name: Build the tagged Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)          #work:${{steps.vars.outputs.tag}}
     - name: Push the tagged Docker image
-      run: docker push pjlamb12/angular-cli:${{steps.vars.outputs.tag}}
+      run: docker push my-image-name:$(date +%s)                                    # pjlamb12/angular-cli:${{steps.vars.outputs.tag}}
     - name: Build the latest Docker image
       run: docker build . --file Dockerfile --tag pjlamb12/angular-cli:latest
     - name: Push the latest Docker image
