@@ -20,6 +20,6 @@ jobs:
     - name: Push the tagged Docker image
       run: docker push padalasurendra2428/work:latest    # pjlamb12/angular-cli:${{steps.vars.outputs.tag}}
     - name: Build the latest Docker image
-      run: docker build . --file Dockerfile --tag pjlamb12/angular-cli:latest
+      run: docker build . --file Dockerfile --tag padalasurendra2428/work:latest
     - name: Push the latest Docker image
-      run: docker push pjlamb12/angular-cli:latest
+      run: docker push padalasurendra2428/work:latest
